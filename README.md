@@ -111,3 +111,8 @@ You need to keep in mind that your kafka topic name corresponds to the index nam
 ![](images/datasource.png)
 
 
+## Medium Blogpost
+
+Go check out the medium blogpost if you want to see a more detailed walkthrough about the kafka-connect sink connector!
+
+[https://medium.com/@barangayretli](https://medium.com/@barangayretli)
