@@ -32,6 +32,8 @@ Now you are ready to use your elasticsearch as datasource. Just use the [http://
 
 This part is optional, now you are ready to visualize the messages with Grafana by adding Elasticsearch as the datasource. 
 
+If you don't have grafana installed and running already, run:
+
 ```shellscript
 brew update
 brew install grafana
