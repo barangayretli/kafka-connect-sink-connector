@@ -26,6 +26,14 @@ You should see something like this:
 
 ![](images/messages.png)
 
-## Result
-
 Now you are ready to use your elasticsearch as datasource. Just use the [http://localhost:9200](http://localhost:9200/test-topic/_search?pretty) port as the URL and you should be good to go.
+
+## Bonus
+
+This part is optional, now you are ready to visualize the messages with Grafana by adding Elasticsearch as the datasource. 
+
+You need to keep in mind that your kafka topic name corresponds to index name in elasticsearch.
+
+![](images/datasource.png)
+
+
