@@ -1,4 +1,4 @@
-# Kafka | Kafka-connect | Elasticsearch | Sink Connector
+# Kafka Connect Elasticsearch Sink Connector
 
 We will use docker and docker-compose to run this project. Increase your memory allocation to 6-8GB just to be safe.
 
@@ -16,7 +16,7 @@ After everything started up, you should see these containers running when you ty
 
 ![](images/dockerps.png)
 
-## Event stored in elasticsearch
+## Messages stored in Elasticsearch
 
 Finally, let’s check if the kafka connector worked as we intended.
 
