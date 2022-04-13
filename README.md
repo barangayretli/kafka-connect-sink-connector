@@ -6,7 +6,7 @@ We will use docker and docker-compose to run this project. Increase your memory 
 
 Since in docker-compose.yml file, the environment variable “KAFKA_ADVERTISED_HOST_NAME” is set to “kafka”, you need to do a small change in your /etc/hosts file 
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.37.52.png)
+![](images/host.png)
 
 ## Run startup.sh
 
@@ -14,7 +14,7 @@ Simply run **startup.sh** file to make everything work. Give it some time to ini
 
 After everything started up, you should see these containers running when you type **docker ps**:
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.53.37.png)
+![](images/dockerps.png)
 
 ## Event stored in elasticsearch
 
@@ -24,7 +24,7 @@ Open your browser and go to  [http://localhost:9200/test-topic/_search?pretty](h
 
 You should see something like this:
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.48.07.png)
+![](images/messages.png)
 
 ## Result
 
