@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Prereqs: docker-compose
-#          mvn (to compile the program)
 #          curl
 
 generate_post_data()
@@ -12,11 +11,11 @@ generate_post_data()
   "config": {
     "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
     "tasks.max": "1",
-    "topics": "test-topic",
+    "topics": "example-topic",
     "key.ignore": "true",
     "schema.ignore": "true",
     "connection.url": "http://elasticsearch:9200",
-    "type.name": "test-type",
+    "type.name": "_doc",
     "name": "elasticsearch-sink",
     "key.converter": "org.apache.kafka.connect.json.JsonConverter",
     "key.converter.schemas.enable": "false",
@@ -48,10 +47,13 @@ curl -i \
 -H "Content-Type:application/json" \
 -X POST --data "$(generate_post_data)" "http://localhost:8083/connectors"
 
-# Wait a while longer to give everything a chance to stabilise
+# Wait a little to give everything chance to stabilise
 echo "Waiting for 15 seconds..."
 sleep 15
 
 #Publish messages to kafka
-docker exec -i kafka bash -c "echo '{\"request\": {\"userId\" : \"23768432478278\"}}' | /opt/kafka/bin/kafka-console-producer.sh --broker-list kafka:9092 --topic test-topic"
+docker exec -i kafka bash -c "echo '{\"request\": {\"userId\" : \"23768432478278\"}}' | /opt/kafka/bin/kafka-console-producer.sh --broker-list kafka:9092 --topic example-topic"
+docker exec -i kafka bash -c "echo '{\"request\": {\"userId\" : \"23768432432453\"}}' | /opt/kafka/bin/kafka-console-producer.sh --broker-list kafka:9092 --topic example-topic"
+docker exec -i kafka bash -c "echo '{\"request\": {\"userId\" : \"23768432432237\"}}' | /opt/kafka/bin/kafka-console-producer.sh --broker-list kafka:9092 --topic example-topic"
+
 exit $rc
