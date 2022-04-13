@@ -12,6 +12,10 @@ Since in docker-compose.yml file, the environment variable “KAFKA_ADVERTISED_H
 
 Simply run **startup.sh** file to make everything work. Give it some time to initialize, it might take a while.
 
+```shellscript
+/bin/bash startup.sh
+```
+
 After everything started up, you should see these containers running when you type **docker ps**:
 
 ![](images/dockerps.png)
