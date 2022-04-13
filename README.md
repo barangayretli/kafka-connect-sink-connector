@@ -24,7 +24,7 @@ Open your browser and go to  [http://localhost:9200/test-topic/_search?pretty](h
 
 You should see something like this:
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.48.07.png)
+![](images/messages.png)
 
 ## Result
 
