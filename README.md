@@ -32,6 +32,12 @@ Now you are ready to use your elasticsearch as datasource. Just use the [http://
 
 This part is optional, now you are ready to visualize the messages with Grafana by adding Elasticsearch as the datasource. 
 
+```shellscript
+brew update
+brew install grafana
+brew services start grafana
+```
+
 Go to Configuration→Data Sources→Add Data Source→Select Elasticsearch and fill out the settings as the following. 
 
 You need to keep in mind that your kafka topic name corresponds to the index name in elasticsearch.
