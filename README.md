@@ -16,7 +16,10 @@ Simply run **startup.sh** file to make everything work. Give it some time to ini
 /bin/bash startup.sh
 ```
 
-After everything started up, you should see these containers running when you type **docker ps**:
+After everything started up, you should see these containers running when you run:
+```shellscript
+docker ps
+```
 
 ![](images/dockerps.png)
 
