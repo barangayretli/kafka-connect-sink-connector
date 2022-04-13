@@ -6,7 +6,7 @@ We will use docker and docker-compose to run this project. Increase your memory 
 
 Since in docker-compose.yml file, the environment variable “KAFKA_ADVERTISED_HOST_NAME” is set to “kafka”, you need to do a small change in your /etc/hosts file 
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.37.52.png)
+![](https://github.com/barangayretli/kafka-connect-sink-connector/tree/main/images/host.png)
 
 ## Run startup.sh
 
