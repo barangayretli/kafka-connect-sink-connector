@@ -83,8 +83,6 @@ You should see something like this:
 }
 ```
 
-![](images/messages.png)
-
 Now you are ready to use your elasticsearch as datasource. Just use the [http://localhost:9200](http://localhost:9200) port as the URL and you should be good to go.
 
 ## Bonus
