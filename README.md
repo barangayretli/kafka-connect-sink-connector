@@ -24,6 +24,65 @@ Open your browser and go to  [http://localhost:9200/example-topic/_search?pretty
 
 You should see something like this:
 
+```json
+
+{
+  "took" : 256,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 3,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "example-topic",
+        "_type" : "_doc",
+        "_id" : "example-topic+0+0",
+        "_score" : 1.0,
+        "_source" : {
+          "request" : {
+            "userId" : "23768432478278"
+          },
+          "messageTS" : "2022-04-13T20:42:05"
+        }
+      },
+      {
+        "_index" : "example-topic",
+        "_type" : "_doc",
+        "_id" : "example-topic+0+1",
+        "_score" : 1.0,
+        "_source" : {
+          "request" : {
+            "userId" : "23768432432453"
+          },
+          "messageTS" : "2022-04-13T20:42:14"
+        }
+      },
+      {
+        "_index" : "example-topic",
+        "_type" : "_doc",
+        "_id" : "example-topic+0+2",
+        "_score" : 1.0,
+        "_source" : {
+          "request" : {
+            "userId" : "23768432432237"
+          },
+          "messageTS" : "2022-04-13T20:42:23"
+        }
+      }
+    ]
+  }
+}
+```
+
 ![](images/messages.png)
 
 Now you are ready to use your elasticsearch as datasource. Just use the [http://localhost:9200](http://localhost:9200) port as the URL and you should be good to go.
