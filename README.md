@@ -14,7 +14,7 @@ Simply run **startup.sh** file to make everything work. Give it some time to ini
 
 After everything started up, you should see these containers running when you type **docker ps**:
 
-![](../../../../../Documents/Screenshots/Screen Shot 2022-03-10 at 10.53.37.png)
+![](images/dockerps.png)
 
 ## Event stored in elasticsearch
 
